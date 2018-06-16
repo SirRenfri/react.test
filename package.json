@@ -1,0 +1,30 @@
+{
+  "name": "react.test",
+  "version": "0.0.1",
+  "private": true,
+  "repository": "https://github.com/SirRenfri/react.test",
+  "author": "Renfri",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server --open --config webpack/dev.config.js",
+    "build": "webpack --config webpack/prod.config.js"
+  },
+  "devDependencies": {
+    "brotli-gzip-webpack-plugin": "^0.5.0",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^0.28.11",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.12.0",
+    "webpack-bundle-analyzer": "^2.13.1",
+    "webpack-cli": "^3.0.7",
+    "webpack-dev-server": "^3.1.4",
+    "webpack-merge": "^4.1.3"
+  },
+  "dependencies": {
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0"
+  }
+}
