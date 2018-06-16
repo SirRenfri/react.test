@@ -38,12 +38,11 @@ module.exports = {
     },
     module: {
         rules: [
-            /*
             {
-                test: /\.js/,
+                test: /\.(js|jsx)$/,
                 loaders: ['babel-loader'],
                 include: path.join(__dirname, './../src')
-            }, */
+            },
             {
                 test: /\.css/,
                 use: ['style-loader', 'css-loader'],
