@@ -2,7 +2,9 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+
 const root = path.join(__dirname, './..');
+const modules = path.join(root, 'src/modules');
 
 module.exports = {
     entry: {
@@ -41,7 +43,7 @@ module.exports = {
             {
                 test: /\.(js|jsx)$/,
                 loaders: ['babel-loader'],
-                include: path.join(__dirname, './../src')
+                include: path.join(root, 'src')
             },
             {
                 test: /\.css/,
@@ -52,6 +54,12 @@ module.exports = {
     resolve: {
         alias: {
             '~': path.resolve(root, 'src'),
+
+            // components
+            'components': path.resolve(root, 'src/components'),
+
+            // modules
+            'auth': path.resolve(modules, 'auth'),
         },
     }
 };
